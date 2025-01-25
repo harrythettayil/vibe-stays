@@ -1,7 +1,19 @@
-export default function Home() {
+import RoomCard from "@/components/RoomCard";
+import Heading from "@/components/Heading";
+import getAllRooms from "./actions/getAllRooms";
+
+export default async function Home() {
+
+  const rooms = await getAllRooms();
+  
   return (
     <>
-    <h1>Bookit app</h1>
+    <Heading title="Available Rooms" />
+    {rooms.length > 0 ? (
+      rooms.map((room)=> <RoomCard room={room}/>)
+    ) : (
+      <p>No Rooms Available at the moment.</p>
+    )}
     </>
   );
 }
