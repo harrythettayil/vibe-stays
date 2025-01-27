@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import '@/assets/styles/globals.css';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AuthWrapper from "@/components/AuthWrapper";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,6 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <AuthWrapper>
     <html lang="en">
       <body
         className={`${inter.className} antialiased`}
@@ -26,5 +28,6 @@ export default function RootLayout({ children }) {
         <ToastContainer />
       </body>
     </html>
+    </AuthWrapper>
   );
 }
