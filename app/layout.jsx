@@ -9,8 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets : ['latin']});
 
 export const metadata = {
-  title: "BookedBoardroom",
-  description: "Book meeting rooms quickly and easily for any business need.",
+  title: "Boardrooms",
+  description: "Meeting rooms quickly and easily for any business need.",
 };
 
 export default function RootLayout({ children }) {

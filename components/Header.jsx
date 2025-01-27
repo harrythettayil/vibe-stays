@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
-              <Image className="h-12 w-12" src={logo} alt="BookedBoardroom" priority={true}/>
+              <Image className="h-12 w-12" src={logo} alt="Boardrooms" priority={true}/>
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
