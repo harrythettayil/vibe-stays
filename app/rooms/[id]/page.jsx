@@ -2,12 +2,12 @@ import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
-import rooms from "@/data/rooms.json"
+import getSingleRoom from "@/app/actions/getSingleRoom";
 import BookingForm from "@/components/BookingForm";
 
-const RoomPage = ({params}) => {
+const RoomPage = async ({params}) => {
     const { id } = params;
-    const room = rooms.find((room)=> room.$id === id)
+    const room = await getSingleRoom(id)
 
     if(!room){
         return <Heading title="Room not found" />
@@ -16,11 +16,6 @@ const RoomPage = ({params}) => {
     <>
     <Heading title={room.name} />
     <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <section className="bg-white mb-5 shadow px-4 py-4">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900">
-          Grand Conference Hall
-        </h1>
-      </section>
       <div className="bg-white shadow rounded-lg p-6">
         <Link
           href="/"
