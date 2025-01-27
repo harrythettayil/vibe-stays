@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
-              <Image className="h-12 w-12" src={logo} alt="Bookit" priority={true}/>
+              <Image className="h-12 w-12" src={logo} alt="BookedBoardroom" priority={true}/>
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -44,12 +44,12 @@ const Header = () => {
                 {/* <!-- Logged In Only --> */}
                 { isAuthenticated && (
                   <> 
-                  <Link
+                  {/*<Link
                     href="/bookings"
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                   >
                     Bookings
-                  </Link>
+                  </Link>*/}
                   <Link
                     href="/rooms/add"
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
@@ -111,12 +111,12 @@ const Header = () => {
           {/* <!-- Logged In Only --> */}
           {isAuthenticated && (
             <>
-              <Link
+              {/* <Link
                 href="/bookings"
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
               >
                 Bookings
-              </Link>
+              </Link> */}
               <Link
                 href="/rooms/add"
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
